@@ -1,38 +1,292 @@
-.App {
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+/* src/App.css */
+/* Product card styles */
+.product-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 16px;
+  background-color: #fff;
+  display: inline-block;
+  width: 300px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-card img {
+  max-width: 100%;
+  height: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 8px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Product detail page styles */
+.product-detail {
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-detail h1 {
+  font-size: 1.5rem;
+  margin: 16px 0;
+}
+
+.product-detail p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.product-detail button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.product-detail button:hover {
+  background-color: #0056b3;
+}
+
+.product-detail button:disabled {
+  background-color: #ccc; /* Change to your preferred color */
+  color: #888; /* Change to your preferred color */
+  cursor: not-allowed;
+}
+
+.product-card p.price {
+  font-size: 1.2rem;
+
+  font-weight: bold;
+  margin-top: 8px;
+  background-color: #ddd;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.product-detail p.price {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-top: 16px;
+}
+
+/* src/App.css */
+/* Navbar styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* src/App.css */
+/* Cart styles */
+.cart {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.cart h2 p {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  padding: 1rem;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart li:last-child {
+  margin-bottom: 0;
+}
+.cart .item-info {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.cart .item-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-right: 16px;
+}
+.cart .item-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cart .item-actions button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cart .item-actions button:hover {
+  background-color: #ff0000;
+}
+
+.cart button:hover {
+  background-color: #ff0000;
+}
+
+.remove-from-cart {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.checkout-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+/* src/App.css */
+/* Checkout styles */
+.checkout {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.checkout form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.checkout label {
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkout input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.checkout input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.checkout button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout button:hover {
+  background-color: #0056b3;
+}
+
+.checkout a {
+  margin-top: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #007bff;
+  transition: text-decoration 0.3s;
+}
+
+.checkout a:hover {
+  text-decoration: underline;
 }
